@@ -11,10 +11,11 @@ The pipeline is designed to ingest, process, and store user data from API to gen
 ### 2. Technology Stack
 
 * **Apache Airflow**: orchestrating the data pipeline. It schedules and manages the streaming tasks from API and Kafka.
-* **Kafka**: Kafka is a distributed streaming platform used as a message broker in the pipeline. It receives the incoming stream of user data from Airflow and reliably delivers it to the downstream processing components. Kafka's high throughput and fault-tolerance make it suitable for handling large volumes of real-time data.
+* **Kafka**: Kafka is a distributed streaming platform used as a message broker in the pipeline. It receives the incoming stream of user data from Airflow and reliably delivers it to the downstream processing components. Kafka's high throughput and fault tolerance make it suitable for handling large volumes of real-time data.
 * **Spark**: Apache Spark is a powerful distributed computing framework used for real-time data processing. It consumes the data stream from Kafka, performs transformations and aggregations, and prepares the data for storage.
 * **Control Center**: A tool to manage and monitor Kafka Clusters.
-* **Cassandra**: A NoSQL database was chosen for its ability to handle high-volume, high-velocity data with low latency. It provides a distributed and scalable solution for storing the processed user data. Cassandra's fault-tolerance and tunable consistency levels make it a reliable choice for real-time data storage.
+* **Schema Registry**: A central repository to store and manage schemas used by Kafka. It ensures data consistency and compatibility across different applications consuming the data.
+* **Cassandra**: A NoSQL database was chosen for its ability to handle high-volume, high-velocity data with low latency. It provides a distributed and scalable solution for storing the processed user data. Cassandra's fault tolerance and tunable consistency levels make it a reliable choice for real-time data storage.
 * **Docker**: Dockerize the components of the pipeline.
 
 ### 3. Why these technologies are used
