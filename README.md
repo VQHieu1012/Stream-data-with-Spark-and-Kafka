@@ -4,6 +4,9 @@ This document outlines the architecture and technology stack used for a real-tim
 The pipeline is designed to ingest, process, and store user data from API to generate actionable insights.
 
 ### 1. Architecture Overview
+
+![Architecture](https://github.com/VQHieu1012/Stream-data-with-Spark-and-Kafka/blob/main/asset/pipeline.png)
+
 * **Data Ingestion**: User data from API is collected and streamed into the pipeline.
 * **Data Processing**: The ingested data is processed in real-time using distributed stream processing frameworks.
 * **Data Storage**: Processed data is stored in a suitable database for further analysis and reporting.
